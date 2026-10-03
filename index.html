@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css?v=13">
+</head>
+<body>
+  <!-- LOADING SCREEN -->
+  <div id="global-loader" class="global-loader">
+    <div class="loader-rings">
+      <div class="ring ring-outer"></div>
+      <div class="ring ring-inner"></div>
+    </div>
+    <div class="loader-text">LOADING...</div>
+  </div>
+
+  <main class="hero">
+    <!-- Top Navigation (Replaces old header) -->
+    <nav class="hero-nav">
+      <div class="hero-nav__logo" id="logoText">
+        <img src="logo.png" alt="We Are Empower Logo">
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" onclick="document.getElementById('mobileNavOverlay').classList.toggle('active')">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+      <div class="hero-nav__links desktop-only-links" id="navLinks">
+        <a href="#mission">MISSION</a>
+        <a href="#launch">LAUNCH</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay (Completely separate from header to guarantee it works) -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <button class="mobile-close-btn" aria-label="Close Menu" onclick="document.getElementById('mobileNavOverlay').classList.remove('active')">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <a href="#mission" onclick="document.getElementById('mobileNavOverlay').classList.remove('active')">MISSION</a>
+      <a href="#launch" onclick="document.getElementById('mobileNavOverlay').classList.remove('active')">LAUNCH</a>
+    </div>
+
+    <!-- Huge Background Text (Z-index: 1) -->
+    <div class="hero-title-bg" id="bgText">WE ARE<span class="desktop-space">&nbsp;</span><br class="mobile-break">EMPOWER</div>
+
+    <!-- Center Image Asset (Z-index: 2) -->
+    <div class="hero-image-container" id="hero-3d-container">
+      <!-- Three.js Canvas will be injected here via main.js -->
+    </div>
+
+    <!-- Bottom Left Content -->
+    <div class="hero-bottom-left">
+      <span class="hero-label" id="leftLabel">WAE</span>
+      <p class="hero-desc" id="leftDesc">Creating opportunities. Building leaders. Strengthening communities. Shaping a more empowered future.</p>
+    </div>
+
+    <!-- Bottom Right Mini Countdown -->
+    <div class="hero-bottom-right">
+      <div class="hero-countdown">
+        <div class="hero-cd-item">
+          <span class="hero-cd-num" id="hero-cd-days">00</span>
+          <span class="hero-cd-label">DAYS</span>
+        </div>
+        <span class="hero-cd-sep">:</span>
+        <div class="hero-cd-item">
+          <span class="hero-cd-num" id="hero-cd-hours">00</span>
+          <span class="hero-cd-label">HRS</span>
+        </div>
+        <span class="hero-cd-sep">:</span>
+        <div class="hero-cd-item">
+          <span class="hero-cd-num" id="hero-cd-mins">00</span>
+          <span class="hero-cd-label">MIN</span>
+        </div>
+        <span class="hero-cd-sep">:</span>
+        <div class="hero-cd-item">
+          <span class="hero-cd-num" id="hero-cd-secs">00</span>
+          <span class="hero-cd-label">SEC</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================ -->
+  <!-- MISSION SECTION              -->
+  <!-- ============================ -->
+  <section class="mission" id="mission">
+    <div class="mission-container">
+      <div class="mission-header">
+        <span class="mission-title">Our Mission</span>
+        <h2 class="mission-headline">Empowering People.<br>Strengthening Possibilities.</h2>
+      </div>
+
+      <div class="mission-grid">
+        <div class="mission-card">
+          <h3 class="mission-card-title">Empowering Youth</h3>
+          <p class="mission-card-text">Creating pathways for young people to discover their potential, build confidence, and become active contributors to society.</p>
+        </div>
+        <div class="mission-card">
+          <h3 class="mission-card-title">Advancing Education</h3>
+          <p class="mission-card-text">Promoting access to meaningful learning, knowledge, and skills that help individuals build a stronger future.</p>
+        </div>
+        <div class="mission-card">
+          <h3 class="mission-card-title">Enabling Opportunities</h3>
+          <p class="mission-card-text">Connecting people with opportunities, resources, and platforms that turn potential into meaningful possibilities.</p>
+        </div>
+        <div class="mission-card">
+          <h3 class="mission-card-title">Building Leaders</h3>
+          <p class="mission-card-text">Nurturing responsible, confident, and purpose-driven individuals who can inspire and lead positive change.</p>
+        </div>
+        <div class="mission-card">
+          <h3 class="mission-card-title">Strengthening Communities</h3>
+          <p class="mission-card-text">Bringing people together, fostering collaboration, and building communities that are more connected, capable, and resilient.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- LAUNCH & SUBSCRIBE SECTION   -->
+  <!-- ============================ -->
+  <section class="launch-section" id="launch">
+    <div class="section-container">
+      <span class="section-subtitle accent-color">SOMETHING BIG IS COMING</span>
+      <h2 class="section-headline">Our Website Launches<br>This <span class="accent-color">Diwali</span></h2>
+      <p class="section-desc">We're lighting up the web this festive season. Get ready for something truly empowering.</p>
+      
+      <div class="countdown-inline">
+        <div class="cd-item">
+          <span class="cd-num accent-color" id="cd-days">00</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <span class="cd-separator">:</span>
+        <div class="cd-item">
+          <span class="cd-num accent-color" id="cd-hours">00</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <span class="cd-separator">:</span>
+        <div class="cd-item">
+          <span class="cd-num accent-color" id="cd-minutes">00</span>
+          <span class="cd-label">Minutes</span>
+        </div>
+        <span class="cd-separator">:</span>
+        <div class="cd-item">
+          <span class="cd-num accent-color" id="cd-seconds">00</span>
+          <span class="cd-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- FOOTER                       -->
+  <!-- ============================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">WAE</div>
+          <p class="footer-tagline">We Are Empower&trade; — Creating opportunities.<br>Building leaders. Strengthening communities.</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4 class="footer-nav-heading">Navigate</h4>
+            <a href="#mission">Our Mission</a>
+            <a href="#launch">Launch</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4 class="footer-nav-heading">Connect</h4>
+            <a href="https://www.instagram.com/weareempower.in/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 We Are Empower&trade;. All Rights Reserved.</p>
+        <p class="footer-made">Made with purpose.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js and Loaders -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  
+  <script src="js/main.js?v=32"></script>
+</body>
+</html>
